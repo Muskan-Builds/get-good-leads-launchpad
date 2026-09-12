@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer className="border-t border-slate-200/80 bg-slate-950 text-slate-300">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:px-8 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <Logo height={42} />
+          <Logo height={38} variant="on-dark" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-400">
             A performance marketing studio built for one outcome: qualified leads that turn into
             revenue. More leads. Better business.

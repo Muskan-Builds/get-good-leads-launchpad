@@ -11,14 +11,14 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-br from-blue-50/90 via-indigo-50/50 via-cyan-50/40 to-purple-50/60 animate-hero-gradient">
+    <section className="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-br from-blue-100/95 via-indigo-100/90 via-cyan-100/80 to-violet-100/90 animate-hero-gradient">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 size-[30rem] rounded-full bg-gradient-to-br from-blue-400/20 via-indigo-400/15 to-cyan-400/20 blur-3xl animate-orb-1"
+        className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 size-[30rem] rounded-full bg-gradient-to-br from-blue-600/30 via-indigo-600/25 to-cyan-500/30 blur-3xl animate-orb-1"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-10 right-10 size-[24rem] rounded-full bg-gradient-to-tr from-violet-400/15 to-emerald-300/15 blur-3xl animate-orb-2"
+        className="pointer-events-none absolute top-10 right-10 size-[24rem] rounded-full bg-gradient-to-tr from-violet-600/25 to-emerald-400/20 blur-3xl animate-orb-2"
       />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">

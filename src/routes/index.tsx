@@ -12,6 +12,7 @@ import {
 import { Reveal } from "@/components/site/Reveal";
 import { CountUp } from "@/components/site/CountUp";
 import { CTASection } from "@/components/site/CTASection";
+import { ShowcaseSlider } from "@/components/site/ShowcaseSlider";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/components/site/contact-info";
 
 export const Route = createFileRoute("/")({
@@ -99,20 +100,20 @@ const testimonials = [
 function Home() {
   return (
     <>
-      {/* Animated Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50/90 via-indigo-50/40 via-cyan-50/50 to-purple-50/70 animate-hero-gradient pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200/60">
-        {/* Animated Dynamic Ambient Mesh Orbs */}
+      {/* Animated Hero Section with Darker Richer Gradient */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-100/95 via-indigo-100/90 via-cyan-100/80 to-violet-100/90 animate-hero-gradient pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200/80">
+        {/* Animated Dynamic Ambient Mesh Orbs with Darker Richer Colors */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-32 left-1/4 size-[34rem] rounded-full bg-gradient-to-br from-blue-500/25 via-indigo-400/20 to-cyan-400/25 blur-3xl animate-orb-1"
+          className="pointer-events-none absolute -top-32 left-1/4 size-[34rem] rounded-full bg-gradient-to-br from-blue-600/35 via-indigo-600/30 to-cyan-500/35 blur-3xl animate-orb-1"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute top-32 right-5 size-[30rem] rounded-full bg-gradient-to-tr from-violet-500/20 via-blue-400/20 to-emerald-400/15 blur-3xl animate-orb-2"
+          className="pointer-events-none absolute top-32 right-5 size-[30rem] rounded-full bg-gradient-to-tr from-violet-600/30 via-blue-500/30 to-emerald-400/25 blur-3xl animate-orb-2"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-20 left-10 size-[26rem] rounded-full bg-gradient-to-r from-sky-400/20 to-indigo-500/15 blur-3xl animate-orb-3"
+          className="pointer-events-none absolute -bottom-20 left-10 size-[26rem] rounded-full bg-gradient-to-r from-sky-500/30 to-indigo-600/25 blur-3xl animate-orb-3"
         />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -253,6 +254,9 @@ function Home() {
           ))}
         </div>
       </section>
+
+      {/* Showcase Feature Cards Slider (Zoom style) */}
+      <ShowcaseSlider />
 
       {/* Services Grid */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
