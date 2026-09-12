@@ -99,23 +99,27 @@ const testimonials = [
 function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-blue-50/80 via-slate-50/50 to-white pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200/60">
-        {/* Soft Ambient Mesh Orbs */}
+      {/* Animated Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50/90 via-indigo-50/40 via-cyan-50/50 to-purple-50/70 animate-hero-gradient pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200/60">
+        {/* Animated Dynamic Ambient Mesh Orbs */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-32 left-1/4 size-[32rem] rounded-full bg-gradient-to-br from-blue-400/20 via-indigo-300/15 to-cyan-300/20 blur-3xl"
+          className="pointer-events-none absolute -top-32 left-1/4 size-[34rem] rounded-full bg-gradient-to-br from-blue-500/25 via-indigo-400/20 to-cyan-400/25 blur-3xl animate-orb-1"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute top-40 right-10 size-[28rem] rounded-full bg-gradient-to-tr from-violet-400/15 via-blue-300/15 to-emerald-300/10 blur-3xl"
+          className="pointer-events-none absolute top-32 right-5 size-[30rem] rounded-full bg-gradient-to-tr from-violet-500/20 via-blue-400/20 to-emerald-400/15 blur-3xl animate-orb-2"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-20 left-10 size-[26rem] rounded-full bg-gradient-to-r from-sky-400/20 to-indigo-500/15 blur-3xl animate-orb-3"
         />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <Reveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/90 px-4 py-1.5 text-xs font-bold tracking-wider text-blue-700 uppercase shadow-2xs backdrop-blur-md">
+                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/90 px-4 py-1.5 text-xs font-bold tracking-wider text-blue-700 uppercase shadow-2xs backdrop-blur-md">
                   <Sparkles className="size-3.5 text-blue-600 animate-pulse" aria-hidden="true" />
                   PERFORMANCE MARKETING STUDIO
                 </span>
@@ -124,7 +128,7 @@ function Home() {
               <Reveal delay={90}>
                 <h1 className="mt-6 text-4xl font-extrabold text-slate-900 tracking-tight sm:text-6xl lg:text-7xl">
                   More leads.{" "}
-                  <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-600 via-indigo-600 via-cyan-500 to-violet-600 bg-clip-text text-transparent animate-gradient-text">
                     Better business.
                   </span>
                 </h1>
@@ -212,7 +216,7 @@ function Home() {
                 <div className="mt-6 rounded-2xl bg-slate-50 p-4 border border-slate-100 flex items-center justify-between">
                   <div>
                     <p className="text-xs font-medium text-slate-500">Target Cost Per Lead</p>
-                    <p className="text-lg font-extrabold text-slate-900">$24.50 <span className="text-xs font-bold text-emerald-600">(-32% lower)</span></p>
+                    <p className="text-lg font-extrabold text-slate-900">₹450 <span className="text-xs font-bold text-emerald-600">(-32% lower)</span></p>
                   </div>
                   <div className="rounded-xl bg-blue-600 px-3.5 py-1.5 text-xs font-bold text-white shadow-xs">
                     Optimized
