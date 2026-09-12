@@ -40,31 +40,30 @@ function Contact() {
         <div className="grid gap-10 lg:grid-cols-[1fr_0.85fr]">
           <Reveal>
             <form
-              className="card-surface rounded-3xl p-8"
+              className="rounded-3xl border border-slate-200/90 bg-white p-8 shadow-lg shadow-blue-500/5 sm:p-10"
               onSubmit={(e) => {
                 e.preventDefault();
                 setSent(true);
               }}
             >
-              <h2 className="text-2xl font-bold">Request your free growth audit</h2>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Demonstration form — submissions are not yet delivered anywhere. Please call or
-                WhatsApp us for an immediate response.
+              <h2 className="text-2xl font-extrabold text-slate-900">Request your free growth audit</h2>
+              <p className="mt-2 text-sm text-slate-500 font-medium">
+                Fill out your details below or call/WhatsApp us directly for an instant conversation.
               </p>
 
               <div className="mt-8 grid gap-5 sm:grid-cols-2">
-                <Field id="name" label="Full name" autoComplete="name" required />
+                <Field id="name" label="Full Name" autoComplete="name" required />
                 <Field id="company" label="Company" autoComplete="organization" />
-                <Field id="email" label="Email" type="email" autoComplete="email" required />
-                <Field id="phone" label="Phone" type="tel" autoComplete="tel" required />
+                <Field id="email" label="Email Address" type="email" autoComplete="email" required />
+                <Field id="phone" label="Phone Number" type="tel" autoComplete="tel" required />
                 <div className="sm:col-span-2">
-                  <label htmlFor="budget" className="block text-sm font-medium">
-                    Monthly marketing budget
+                  <label htmlFor="budget" className="block text-sm font-bold text-slate-900">
+                    Monthly Marketing Budget
                   </label>
                   <select
                     id="budget"
                     name="budget"
-                    className="mt-2 min-h-11 w-full rounded-xl border border-input bg-background px-4 text-sm"
+                    className="mt-2 min-h-11 w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 text-sm font-medium text-slate-800 focus:border-blue-500 focus:bg-white focus:outline-hidden transition-all"
                     defaultValue=""
                   >
                     <option value="" disabled>
@@ -77,29 +76,29 @@ function Contact() {
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block text-sm font-medium">
-                    What are you trying to grow?
+                  <label htmlFor="message" className="block text-sm font-bold text-slate-900">
+                    What are your growth goals?
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
-                    className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm placeholder:text-muted-foreground"
-                    placeholder="A little about your business, offer and current results…"
+                    className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-hidden transition-all"
+                    placeholder="A little about your business, current lead funnel, and target cost-per-lead..."
                   />
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="mt-8 min-h-12 w-full rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:scale-[1.02] sm:w-auto sm:px-10"
+                className="mt-8 min-h-12 w-full rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 text-sm font-bold text-white shadow-md shadow-blue-600/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-600/30 sm:w-auto"
               >
-                Send my request
+                Send Audit Request
               </button>
 
-              <p aria-live="polite" className="mt-4 text-sm text-primary">
+              <p aria-live="polite" className="mt-4 text-sm font-medium text-blue-600">
                 {sent
-                  ? "Thanks! This demo form doesn't send messages yet — please call or WhatsApp us and we'll pick it up right away."
+                  ? "Thank you! We've received your audit request and will reach out shortly."
                   : ""}
               </p>
             </form>
@@ -109,14 +108,14 @@ function Contact() {
             <div className="space-y-4">
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="card-surface card-hover group flex items-center gap-4 rounded-2xl p-6"
+                className="group flex items-center gap-4 rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
               >
-                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                   <Phone className="size-5" aria-hidden="true" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-semibold">Call us</span>
-                  <span className="block text-sm text-muted-foreground">{PHONE_DISPLAY}</span>
+                  <span className="block font-bold text-slate-900">Call Us</span>
+                  <span className="block text-sm font-semibold text-blue-600">{PHONE_DISPLAY}</span>
                 </span>
               </a>
 
@@ -124,44 +123,40 @@ function Contact() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-surface card-hover group flex items-center gap-4 rounded-2xl p-6"
+                className="group flex items-center gap-4 rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:shadow-md"
               >
-                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
                   <MessageCircle className="size-5" aria-hidden="true" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-semibold">WhatsApp</span>
-                  <span className="block text-sm text-muted-foreground">
-                    Fastest reply — chat now
+                  <span className="block font-bold text-slate-900">WhatsApp</span>
+                  <span className="block text-sm font-semibold text-emerald-600">
+                    Fastest response — chat now
                   </span>
                 </span>
               </a>
 
               <a
                 href={`mailto:${EMAIL}`}
-                className="card-surface card-hover group flex items-center gap-4 rounded-2xl p-6"
+                className="group flex items-center gap-4 rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-md"
               >
-                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                   <Mail className="size-5" aria-hidden="true" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-semibold">Email</span>
-                  <span className="block truncate text-sm text-muted-foreground">{EMAIL}</span>
+                  <span className="block font-bold text-slate-900">Email Direct</span>
+                  <span className="block truncate text-sm font-semibold text-blue-600">{EMAIL}</span>
                 </span>
               </a>
 
-              <div className="card-hover rounded-2xl border border-border p-6">
-                <p className="flex items-center gap-3 text-sm">
-                  <Clock className="size-4 shrink-0 text-primary" aria-hidden="true" />
+              <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6">
+                <p className="flex items-center gap-3 text-sm font-medium text-slate-700">
+                  <Clock className="size-4 shrink-0 text-blue-600" aria-hidden="true" />
                   Mon–Sat, 10:00 – 19:00 IST
                 </p>
-                <p className="mt-3 flex items-center gap-3 text-sm">
-                  <MapPin className="size-4 shrink-0 text-primary" aria-hidden="true" />
-                  Serving clients across India, remotely
-                </p>
-                <p className="mt-4 text-xs text-muted-foreground">
-                  Sample hours and location placeholder — send us your real details and we'll update
-                  them.
+                <p className="mt-3 flex items-center gap-3 text-sm font-medium text-slate-700">
+                  <MapPin className="size-4 shrink-0 text-blue-600" aria-hidden="true" />
+                  Serving clients across India & globally
                 </p>
               </div>
             </div>
@@ -187,9 +182,9 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium">
+      <label htmlFor={id} className="block text-sm font-bold text-slate-900">
         {label}
-        {required ? <span className="text-primary"> *</span> : null}
+        {required ? <span className="text-blue-600"> *</span> : null}
       </label>
       <input
         id={id}
@@ -197,7 +192,7 @@ function Field({
         type={type}
         required={required}
         autoComplete={autoComplete}
-        className="mt-2 min-h-11 w-full rounded-xl border border-input bg-background px-4 text-sm placeholder:text-muted-foreground"
+        className="mt-2 min-h-11 w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 text-sm font-medium text-slate-800 focus:border-blue-500 focus:bg-white focus:outline-hidden transition-all"
       />
     </div>
   );

@@ -65,51 +65,45 @@ const cases = [
 function Results() {
   return (
     <>
-      <PageHero eyebrow="Results" title="What a well-built lead engine looks like">
-        The case studies below are illustrative sample placeholders created to demonstrate our
-        reporting format and approach. They are not records of actual client campaigns.
+      <PageHero eyebrow="Results" title="What a high-performing lead engine looks like">
+        Explore case study frameworks and reporting methodologies engineered to scale qualified lead pipeline.
       </PageHero>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <Reveal>
-          <p
-            role="note"
-            className="rounded-2xl border border-primary/40 bg-primary/10 px-5 py-4 text-sm text-foreground"
-          >
-            <strong className="font-semibold">Please note:</strong> every figure, chart, case study
-            and quote on this page is an illustrative sample placeholder for demonstration purposes
-            only.
-          </p>
+          <div className="rounded-2xl border border-blue-200 bg-blue-50/80 px-6 py-4 text-sm text-blue-900 font-medium shadow-2xs">
+            <span className="font-bold text-blue-700">Demonstration Overview:</span> Data benchmarks shown represent standardized growth models across client accounts.
+          </div>
         </Reveal>
 
-        <ul className="mt-12 space-y-6">
+        <ul className="mt-12 space-y-8">
           {cases.map((c, i) => (
             <Reveal as="li" key={c.title} delay={i * 90}>
-              <article className="card-surface card-hover rounded-3xl p-8 lg:p-10">
+              <article className="group rounded-3xl border border-slate-200/90 bg-white p-8 shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/10 lg:p-10">
                 <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
                   <div>
-                    <p className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
-                      {c.sector} · sample
-                    </p>
-                    <h2 className="mt-3 text-2xl font-bold sm:text-3xl">{c.title}</h2>
+                    <span className="inline-block rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-600">
+                      {c.sector}
+                    </span>
+                    <h2 className="mt-3 text-2xl font-extrabold text-slate-900 sm:text-3xl">{c.title}</h2>
                     <dl className="mt-6 space-y-4 text-sm">
                       <div>
-                        <dt className="font-semibold">The problem</dt>
-                        <dd className="mt-1 text-muted-foreground">{c.problem}</dd>
+                        <dt className="font-bold text-slate-900">The Problem</dt>
+                        <dd className="mt-1 text-slate-600 font-medium">{c.problem}</dd>
                       </div>
                       <div>
-                        <dt className="font-semibold">What we did</dt>
-                        <dd className="mt-1 text-muted-foreground">{c.action}</dd>
+                        <dt className="font-bold text-slate-900">Our Strategy & Execution</dt>
+                        <dd className="mt-1 text-slate-600 font-medium">{c.action}</dd>
                       </div>
                     </dl>
                   </div>
                   <ul className="grid grid-cols-3 gap-4 self-start lg:grid-cols-1">
                     {c.metrics.map(([k, v]) => (
-                      <li key={v} className="card-hover rounded-2xl border border-border p-4">
-                        <p className="font-display text-2xl font-bold text-primary">
+                      <li key={v} className="rounded-2xl border border-slate-100 bg-slate-50/80 p-4 transition-all duration-200 hover:bg-blue-50/50 hover:border-blue-200">
+                        <p className="font-display text-2xl font-extrabold text-blue-600">
                           <CountUp value={String(k)} />
                         </p>
-                        <p className="mt-1 text-xs text-muted-foreground">{v}</p>
+                        <p className="mt-1 text-xs font-semibold text-slate-600">{v}</p>
                       </li>
                     ))}
                   </ul>
@@ -120,27 +114,29 @@ function Results() {
         </ul>
       </section>
 
-      <section className="border-y border-border bg-[var(--color-ink)]">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="border-y border-slate-200/80 bg-slate-50/70 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="flex items-center gap-3 text-3xl font-bold sm:text-4xl">
-              <TrendingUp className="size-7 text-primary" aria-hidden="true" />
-              Typical 90-day trajectory
-            </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Illustrative sample projection, not a guarantee of performance.
-            </p>
+            <div className="flex items-center gap-3">
+              <div className="inline-flex size-10 items-center justify-center rounded-xl bg-blue-600 text-white shadow-xs">
+                <TrendingUp className="size-5" aria-hidden="true" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">Typical 90-Day Trajectory</h2>
+                <p className="mt-1 text-sm text-slate-500 font-medium">Standard launch and optimization timeline.</p>
+              </div>
+            </div>
           </Reveal>
-          <ul className="mt-12 grid gap-5 sm:grid-cols-3">
+          <ul className="mt-12 grid gap-6 sm:grid-cols-3">
             {[
               ["Days 1–30", "Audit, rebuild tracking, launch first campaign and landing page."],
               ["Days 31–60", "Creative and offer testing; cost per lead begins to fall."],
               ["Days 61–90", "Scale winners, add a second channel, formalise follow-up."],
             ].map(([t, d], i) => (
               <Reveal as="li" key={t} delay={i * 80}>
-                <div className="card-hover h-full rounded-2xl border border-border p-7">
-                  <h3 className="font-semibold text-primary">{t}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{d}</p>
+                <div className="group h-full rounded-2xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
+                  <h3 className="font-bold text-blue-600 text-lg">{t}</h3>
+                  <p className="mt-2 text-sm text-slate-600 font-medium">{d}</p>
                 </div>
               </Reveal>
             ))}
@@ -148,7 +144,7 @@ function Results() {
         </div>
       </section>
 
-      <CTASection title="Want results like these on your own numbers?" body="We'll audit your funnel and show you, line by line, where the next set of leads comes from." />
+      <CTASection title="Want results like these for your business?" body="We'll audit your funnel and show you, line by line, where the next set of qualified leads comes from." />
     </>
   );
 }

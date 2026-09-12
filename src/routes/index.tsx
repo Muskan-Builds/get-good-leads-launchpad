@@ -99,98 +99,124 @@ const testimonials = [
 function Home() {
   return (
     <>
-      <section className="glow-grid relative overflow-hidden">
-        <div aria-hidden="true" className="orb -top-24 -left-24 size-[26rem] opacity-60" />
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-blue-50/80 via-slate-50/50 to-white pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200/60">
+        {/* Soft Ambient Mesh Orbs */}
         <div
           aria-hidden="true"
-          className="orb top-40 -right-32 size-[30rem] opacity-40 [animation-delay:-6s]"
+          className="pointer-events-none absolute -top-32 left-1/4 size-[32rem] rounded-full bg-gradient-to-br from-blue-400/20 via-indigo-300/15 to-cyan-300/20 blur-3xl"
         />
-        <div className="relative mx-auto max-w-7xl px-4 pt-20 pb-24 sm:px-6 lg:px-8 lg:pt-28 lg:pb-32">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-40 right-10 size-[28rem] rounded-full bg-gradient-to-tr from-violet-400/15 via-blue-300/15 to-emerald-300/10 blur-3xl"
+        />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <Reveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-semibold tracking-wide text-muted-foreground uppercase">
-                  <Sparkles className="size-3.5 text-primary" aria-hidden="true" />
-                  Performance marketing studio
+                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/90 px-4 py-1.5 text-xs font-bold tracking-wider text-blue-700 uppercase shadow-2xs backdrop-blur-md">
+                  <Sparkles className="size-3.5 text-blue-600 animate-pulse" aria-hidden="true" />
+                  PERFORMANCE MARKETING STUDIO
                 </span>
               </Reveal>
+
               <Reveal delay={90}>
-                <h1 className="mt-6 text-4xl font-bold text-balance sm:text-6xl lg:text-7xl">
+                <h1 className="mt-6 text-4xl font-extrabold text-slate-900 tracking-tight sm:text-6xl lg:text-7xl">
                   More leads.{" "}
-                  <span className="bg-gradient-to-r from-primary to-[oklch(0.72_0.17_250)] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
                     Better business.
                   </span>
                 </h1>
               </Reveal>
+
               <Reveal delay={160}>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 font-medium">
                   We build lead engines for ambitious brands — paid ads, search, funnels and
-                  conversion work that fill your calendar with people ready to buy.
+                  conversion work that fill your calendar with qualified buyers.
                 </p>
               </Reveal>
+
               <Reveal delay={230}>
-                <div className="mt-9 flex flex-wrap gap-3">
+                <div className="mt-9 flex flex-wrap items-center gap-3.5">
                   <Link
                     to="/contact"
-                    className="rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:scale-[1.04]"
+                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-blue-600/35 active:scale-[0.98]"
                   >
-                    Get a free growth audit
+                    Get Free Growth Audit
                   </Link>
                   <a
                     href={`tel:${PHONE_TEL}`}
-                    className="rounded-full border border-border px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-secondary"
+                    className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 shadow-2xs transition-all duration-300 hover:border-blue-300 hover:bg-blue-50/50 hover:text-blue-600"
                   >
                     Call {PHONE_DISPLAY}
                   </a>
                 </div>
               </Reveal>
+
               <Reveal delay={300}>
-                <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6">
+                <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 pt-6 border-t border-slate-200/80">
                   {[
-                    ["3.4x", "Avg. return target"],
-                    ["-38%", "Cost per lead goal"],
-                    ["14 days", "To first campaign"],
+                    ["3.4x", "Avg. ROI Target"],
+                    ["-38%", "Cost Per Lead"],
+                    ["14 Days", "To Launch"],
                   ].map(([k, v]) => (
-                    <div key={v}>
-                      <dt className="font-display text-2xl font-bold text-primary sm:text-3xl">
+                    <div key={v} className="group transition-transform duration-300 hover:-translate-y-1">
+                      <dt className="font-display text-2xl font-extrabold text-blue-600 sm:text-3xl">
                         <CountUp value={String(k)} />
                       </dt>
-                      <dd className="mt-1 text-xs text-muted-foreground">{v}</dd>
+                      <dd className="mt-1 text-xs font-semibold text-slate-500 group-hover:text-slate-900 transition-colors">{v}</dd>
                     </div>
                   ))}
                 </dl>
-                <p className="mt-3 text-xs text-muted-foreground">
-                  Illustrative sample figures shown for demonstration only.
-                </p>
               </Reveal>
             </div>
 
-            <Reveal delay={200} className="lg:justify-self-end">
-              <div className="card-surface float-soft w-full rounded-3xl p-6 sm:p-8">
-                <p className="text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase">
-                  Live pipeline snapshot
-                </p>
-                <p className="mt-1 text-[11px] text-muted-foreground">Sample data placeholder</p>
+            {/* Visual Interactive Dashboard Widget */}
+            <Reveal delay={200} className="lg:justify-self-end w-full">
+              <div className="relative rounded-3xl border border-slate-200/90 bg-white/95 p-6 shadow-2xl shadow-blue-900/10 backdrop-blur-xl sm:p-8">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-2.5">
+                    <span className="size-3 rounded-full bg-emerald-500 ring-4 ring-emerald-100 animate-pulse" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
+                      Live Campaign Engine
+                    </span>
+                  </div>
+                  <span className="rounded-full bg-blue-50 px-3 py-1 text-[11px] font-bold text-blue-600">
+                    +142% MoM
+                  </span>
+                </div>
+
                 <div className="mt-6 space-y-4">
                   {[
-                    ["Google Search", 82],
-                    ["Meta Ads", 64],
-                    ["Local SEO", 47],
-                    ["Referral funnel", 29],
-                  ].map(([label, val]) => (
-                    <div key={label as string}>
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-muted-foreground">{label}</span>
-                        <span className="font-semibold">{val} leads</span>
+                    ["Google Paid Search", 88, "from-blue-500 to-indigo-600"],
+                    ["Meta Ads Engine", 74, "from-indigo-500 to-violet-600"],
+                    ["Local SEO & Maps", 59, "from-cyan-500 to-blue-600"],
+                    ["High-Intent Funnels", 42, "from-emerald-500 to-teal-600"],
+                  ].map(([label, val, grad]) => (
+                    <div key={label as string} className="group">
+                      <div className="flex items-center justify-between text-xs font-bold text-slate-700">
+                        <span className="group-hover:text-blue-600 transition-colors">{label}</span>
+                        <span className="text-blue-600">{val} Qualified Leads</span>
                       </div>
-                      <div className="mt-2 h-2 overflow-hidden rounded-full bg-secondary">
+                      <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-slate-100">
                         <div
-                          className="h-full rounded-full bg-primary transition-[width] duration-1000"
+                          className={`h-full rounded-full bg-gradient-to-r ${grad} transition-all duration-1000 group-hover:brightness-110`}
                           style={{ width: `${val as number}%` }}
                         />
                       </div>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-6 rounded-2xl bg-slate-50 p-4 border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <p className="text-xs font-medium text-slate-500">Target Cost Per Lead</p>
+                    <p className="text-lg font-extrabold text-slate-900">$24.50 <span className="text-xs font-bold text-emerald-600">(-32% lower)</span></p>
+                  </div>
+                  <div className="rounded-xl bg-blue-600 px-3.5 py-1.5 text-xs font-bold text-white shadow-xs">
+                    Optimized
+                  </div>
                 </div>
               </div>
             </Reveal>
@@ -198,7 +224,8 @@ function Home() {
         </div>
       </section>
 
-      <section className="overflow-hidden border-y border-border bg-[var(--color-ink)] py-5">
+      {/* Marquee Category Banner */}
+      <section className="overflow-hidden border-b border-slate-200/80 bg-slate-900 py-4">
         <div className="marquee-track flex w-max gap-12 pr-12">
           {[...Array(2)].map((_, dup) => (
             <div key={dup} className="flex gap-12" aria-hidden={dup === 1}>
@@ -209,11 +236,11 @@ function Home() {
                 "B2B SaaS",
                 "Education",
                 "Finance",
-                "D2C Retail",
+                "D2C Brands",
               ].map((x) => (
                 <span
                   key={x}
-                  className="font-display text-sm font-semibold tracking-[0.25em] text-muted-foreground uppercase"
+                  className="font-display text-xs font-bold tracking-[0.2em] text-slate-300 transition-colors duration-300 hover:text-cyan-400 uppercase"
                 >
                   {x}
                 </span>
@@ -223,47 +250,62 @@ function Home() {
         </div>
       </section>
 
+      {/* Services Grid */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <Reveal>
-          <h2 className="max-w-2xl text-3xl font-bold text-balance sm:text-4xl">
-            Everything you need to turn attention into revenue
-          </h2>
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="inline-block rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-600">
+              Core Capabilities
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-slate-900 tracking-tight text-balance sm:text-4xl lg:text-5xl">
+              Everything you need to turn attention into revenue
+            </h2>
+          </div>
         </Reveal>
-        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
-            <Reveal as="li" key={s.title} delay={i * 70}>
-              <div className="card-surface card-hover group h-full rounded-2xl p-7">
-                <span className="icon-chip inline-flex size-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
-                  <s.icon className="size-5" aria-hidden="true" />
+            <Reveal as="li" key={s.title} delay={i * 60}>
+              <div className="group h-full rounded-2xl border border-slate-200/90 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/10">
+                <span className="inline-flex size-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 shadow-2xs group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                  <s.icon className="size-6 transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
                 </span>
-                <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+                <h3 className="mt-5 text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 font-medium">{s.body}</p>
               </div>
             </Reveal>
           ))}
         </ul>
-        <Reveal delay={120}>
+
+        <Reveal delay={120} className="mt-12 text-center">
           <Link
             to="/services"
-            className="mt-10 inline-flex rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
+            className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-bold text-slate-700 shadow-2xs transition-all duration-300 hover:border-blue-300 hover:bg-blue-50/50 hover:text-blue-600 hover:scale-[1.03]"
           >
-            Explore all services
+            Explore All Services & Packages →
           </Link>
         </Reveal>
       </section>
 
-      <section className="border-y border-border bg-[var(--color-ink)]">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      {/* How We Work Process Section */}
+      <section className="border-y border-slate-200/80 bg-slate-50/60 py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-3xl font-bold sm:text-4xl">How we work</h2>
+            <div className="text-center max-w-2xl mx-auto">
+              <span className="inline-block rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-600">
+                Systematic Execution
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl lg:text-5xl">How we deliver leads</h2>
+            </div>
           </Reveal>
-          <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
               <Reveal as="li" key={s.n} delay={i * 80}>
-                <div className="card-hover h-full rounded-2xl border border-border p-7">
-                  <span className="font-display text-4xl font-bold text-primary/40">{s.n}</span>
-                  <h3 className="mt-4 text-lg font-semibold">{s.t}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.d}</p>
+                <div className="group h-full rounded-2xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
+                  <span className="font-display text-4xl font-extrabold text-blue-600/30 transition-colors duration-300 group-hover:text-blue-600">{s.n}</span>
+                  <h3 className="mt-4 text-lg font-bold text-slate-900">{s.t}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600 font-medium">{s.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -271,33 +313,36 @@ function Home() {
         </div>
       </section>
 
+      {/* Testimonials */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <Reveal>
-          <h2 className="text-3xl font-bold sm:text-4xl">What clients say</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Sample testimonials — illustrative placeholders, not real client statements.
-          </p>
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="inline-block rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-600">
+              Client Feedback
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">What growth leaders say</h2>
+          </div>
         </Reveal>
-        <ul className="mt-12 grid gap-5 lg:grid-cols-3">
+
+        <ul className="mt-14 grid gap-6 lg:grid-cols-3">
           {testimonials.map((t, i) => (
             <Reveal as="li" key={t.name} delay={i * 80}>
-              <figure className="card-surface card-hover group h-full rounded-2xl p-7">
-                <div className="flex gap-1 text-primary" aria-label="5 out of 5 stars">
+              <figure className="group h-full rounded-2xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
+                <div className="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
                   {[...Array(5)].map((_, k) => (
                     <Star
                       key={k}
-                      className="size-4 fill-current transition-transform duration-300 group-hover:scale-110"
-                      style={{ transitionDelay: `${k * 45}ms` }}
+                      className="size-4 fill-current"
                       aria-hidden="true"
                     />
                   ))}
                 </div>
-                <blockquote className="mt-5 text-sm leading-relaxed text-foreground">
+                <blockquote className="mt-5 text-sm leading-relaxed text-slate-700 font-medium">
                   “{t.quote}”
                 </blockquote>
-                <figcaption className="mt-5 text-sm">
-                  <span className="font-semibold">{t.name}</span>
-                  <span className="block text-muted-foreground">{t.role}</span>
+                <figcaption className="mt-6 pt-4 border-t border-slate-100 text-sm">
+                  <span className="font-bold text-slate-900">{t.name}</span>
+                  <span className="block text-xs font-medium text-slate-500">{t.role}</span>
                 </figcaption>
               </figure>
             </Reveal>

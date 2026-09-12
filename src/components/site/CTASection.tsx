@@ -12,36 +12,46 @@ export function CTASection({
 }) {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <Reveal className="card-surface relative overflow-hidden rounded-3xl px-6 py-14 text-center sm:px-12">
+      <Reveal className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-700 px-6 py-16 text-center text-white shadow-2xl shadow-blue-600/20 sm:px-12">
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 -top-24 mx-auto h-48 w-2/3 rounded-full bg-primary/30 blur-3xl"
+          className="absolute -top-24 -left-20 size-72 rounded-full bg-cyan-400/30 blur-3xl"
         />
-        <div aria-hidden="true" className="orb -right-16 -bottom-24 size-72 opacity-50" />
-        <div className="relative">
-          <h2 className="text-3xl font-bold text-balance sm:text-4xl">{title}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{body}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+        <div
+          aria-hidden="true"
+          className="absolute -bottom-24 -right-20 size-80 rounded-full bg-violet-400/30 blur-3xl"
+        />
+        <div className="relative z-10">
+          <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-cyan-200 backdrop-blur-md">
+            Accelerate Growth
+          </span>
+          <h2 className="mt-4 text-3xl font-extrabold text-balance text-white sm:text-4xl lg:text-5xl">
+            {title}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-blue-100/90 leading-relaxed font-medium sm:text-lg">
+            {body}
+          </p>
+          <div className="mt-9 flex flex-wrap justify-center gap-3.5">
             <Link
               to="/contact"
-              className="cta-glow rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground"
+              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-bold text-blue-700 shadow-lg shadow-black/10 transition-all duration-300 hover:scale-[1.04] hover:bg-slate-50 hover:shadow-xl active:scale-[0.98]"
             >
-              Get my free audit
+              Get Free Audit
             </Link>
             <a
               href={`tel:${PHONE_TEL}`}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-secondary"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:border-white/50"
             >
-              <Phone className="size-4 shrink-0" aria-hidden="true" />
+              <Phone className="size-4 shrink-0 text-cyan-200" aria-hidden="true" />
               {PHONE_DISPLAY}
             </a>
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-secondary"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:border-white/50"
             >
-              <MessageCircle className="size-4 shrink-0" aria-hidden="true" />
+              <MessageCircle className="size-4 shrink-0 text-emerald-300" aria-hidden="true" />
               WhatsApp
             </a>
           </div>

@@ -58,30 +58,33 @@ const team = [
 function About() {
   return (
     <>
-      <PageHero eyebrow="About Us" title="A small team that treats your budget like our own">
-        Get Good Leads was built by marketers who got tired of dashboards that looked great while
-        the phone stayed silent. We exist to change that number.
+      <PageHero eyebrow="About Us" title="A dedicated team that treats your growth like our own">
+        Get Good Leads was built by performance marketers who got tired of dashboards that looked great while
+        the phone stayed silent. We exist to generate real revenue.
       </PageHero>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-14 lg:grid-cols-2">
+        <div className="grid gap-14 lg:grid-cols-2 items-center">
           <Reveal>
-            <h2 className="text-3xl font-bold sm:text-4xl">Our story</h2>
-            <div className="mt-5 space-y-4 text-muted-foreground">
+            <span className="inline-block rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-600">
+              Our Philosophy
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">Built on outcome, not impressions</h2>
+            <div className="mt-5 space-y-4 text-slate-600 font-medium leading-relaxed">
               <p>
-                We started with a simple observation: most businesses don't have a traffic problem,
-                they have a conversion and follow-up problem. Spend more, and you simply buy more of
+                We started with a simple observation: most businesses don't have a traffic problem—they
+                have a conversion, funnel, and follow-up problem. Spend more, and you simply buy more of
                 the same disappointment.
               </p>
               <p>
-                So we work in the other direction. First the offer, then the page, then the
-                tracking, and only then the media. It's slower in week one and dramatically cheaper
+                So we work in the other direction. First the offer, then the landing page, then the
+                tracking, and only then the media spend. It's disciplined in week one and dramatically cheaper
                 by month three.
               </p>
               <p>
-                Today we partner with a deliberately small number of brands across home services,
-                healthcare, education, real estate and B2B — the categories where one good lead can
-                change a quarter.
+                Today we partner with a deliberately focused roster of brands across home services,
+                healthcare, education, real estate, and B2B—the categories where one good lead can
+                transform a quarter.
               </p>
             </div>
           </Reveal>
@@ -89,12 +92,12 @@ function About() {
           <Reveal delay={120}>
             <ul className="grid gap-5 sm:grid-cols-2">
               {values.map((v) => (
-                <li key={v.t} className="card-surface card-hover group rounded-2xl p-6">
-                  <span className="inline-flex size-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                <li key={v.t} className="group rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
+                  <span className="inline-flex size-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                     <v.icon className="size-5" aria-hidden="true" />
                   </span>
-                  <h3 className="mt-4 font-semibold">{v.t}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.d}</p>
+                  <h3 className="mt-4 font-bold text-slate-900">{v.t}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600 font-medium">{v.d}</p>
                 </li>
               ))}
             </ul>
@@ -102,17 +105,23 @@ function About() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-[var(--color-ink)]">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="border-y border-slate-200/80 bg-slate-50/70 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-3xl font-bold sm:text-4xl">How the team is built</h2>
+            <div className="text-center max-w-2xl mx-auto">
+              <span className="inline-block rounded-full bg-blue-50 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-600">
+                Specialized Talent
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">How our team operates</h2>
+            </div>
           </Reveal>
-          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((t, i) => (
               <Reveal as="li" key={t.n} delay={i * 80}>
-                <div className="card-hover h-full rounded-2xl border border-border p-7">
-                  <h3 className="text-lg font-semibold">{t.n}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{t.d}</p>
+                <div className="group h-full rounded-2xl border border-slate-200/90 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{t.n}</h3>
+                  <p className="mt-2 text-sm text-slate-600 font-medium">{t.d}</p>
                 </div>
               </Reveal>
             ))}

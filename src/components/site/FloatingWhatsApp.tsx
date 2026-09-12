@@ -1,21 +1,23 @@
 import { MessageCircle } from "lucide-react";
-
-const WHATSAPP_LINK = "https://wa.me/917985591914";
+import { PHONE_DISPLAY, WHATSAPP_URL } from "./contact-info";
 
 export function FloatingWhatsApp() {
   return (
     <a
-      href={WHATSAPP_LINK}
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Get Good Leads on WhatsApp"
-      className="glow-pulse fixed right-4 bottom-4 z-50 inline-flex min-h-14 min-w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_16px_40px_-12px_rgba(37,99,255,0.85)] transition-transform duration-300 hover:scale-110 focus-visible:scale-110"
+      aria-label={`Chat with Get Good Leads on WhatsApp at ${PHONE_DISPLAY}`}
+      className="group glow-pulse fixed right-5 bottom-5 z-50 inline-flex items-center gap-2.5 rounded-full bg-emerald-500 px-4 py-3 text-white shadow-[0_12px_35px_-8px_rgba(16,185,129,0.7)] transition-all duration-300 hover:scale-105 hover:bg-emerald-600 focus-visible:scale-105"
     >
       <span
         aria-hidden="true"
-        className="ping-ring absolute inset-0 rounded-full border border-primary/60"
+        className="ping-ring absolute inset-0 rounded-full border border-emerald-400/60"
       />
-      <MessageCircle className="relative size-6" aria-hidden="true" />
+      <MessageCircle className="relative size-6 shrink-0 fill-current" aria-hidden="true" />
+      <span className="hidden font-semibold text-xs tracking-wide sm:inline-block">
+        WhatsApp ({PHONE_DISPLAY})
+      </span>
     </a>
   );
 }
