@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MessageCircle, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { Logo } from "./Logo";
 import { EMAIL, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "./contact-info";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function SiteFooter() {
   return (
@@ -53,7 +54,7 @@ export function SiteFooter() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 transition-colors hover:text-emerald-400"
               >
-                <MessageCircle className="size-4 shrink-0 text-emerald-400" aria-hidden="true" />
+                <WhatsAppIcon colored className="size-4 shrink-0" />
                 WhatsApp ({PHONE_DISPLAY})
               </a>
             </li>

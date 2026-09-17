@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "./contact-info";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function CTASection({
   title = "Ready for a pipeline you can predict?",
@@ -12,14 +13,14 @@ export function CTASection({
 }) {
   return (
     <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-      <Reveal className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-700 px-6 py-16 text-center text-white shadow-2xl shadow-blue-600/20 sm:px-12">
+      <Reveal className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-600 px-6 py-16 text-center text-white shadow-2xl shadow-blue-600/20 sm:px-12">
         <div
           aria-hidden="true"
           className="absolute -top-24 -left-20 size-72 rounded-full bg-cyan-400/30 blur-3xl"
         />
         <div
           aria-hidden="true"
-          className="absolute -bottom-24 -right-20 size-80 rounded-full bg-violet-400/30 blur-3xl"
+          className="absolute -bottom-24 -right-20 size-80 rounded-full bg-sky-400/30 blur-3xl"
         />
         <div className="relative z-10">
           <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-cyan-200 backdrop-blur-md">
@@ -51,7 +52,7 @@ export function CTASection({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:border-white/50"
             >
-              <MessageCircle className="size-4 shrink-0 text-emerald-300" aria-hidden="true" />
+              <WhatsAppIcon colored className="size-4 shrink-0" />
               WhatsApp
             </a>
           </div>

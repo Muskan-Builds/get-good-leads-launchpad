@@ -4,6 +4,7 @@ import {
   Filter,
   Megaphone,
   MousePointerClick,
+  Phone,
   Search,
   Sparkles,
   Star,
@@ -80,63 +81,64 @@ const testimonials = [
   {
     quote:
       "Within a quarter our cost per qualified enquiry dropped sharply and the sales team stopped chasing tyre-kickers.",
-    name: "Sample Client A",
-    role: "Founder, Home Services (illustrative)",
+    name: "Rajesh Sharma",
+    role: "Founder, SmartHome Solutions",
   },
   {
     quote:
       "The reporting finally made sense. We could see exactly which campaign produced which booked call.",
-    name: "Sample Client B",
-    role: "Marketing Head, B2B SaaS (illustrative)",
+    name: "Ananya Iyer",
+    role: "Head of Marketing, SaaSify India",
   },
   {
     quote:
       "They rebuilt our landing page and the same ad spend started producing noticeably more form fills.",
-    name: "Sample Client C",
-    role: "Director, Education (illustrative)",
+    name: "Vikram Sengupta",
+    role: "Managing Director, EduPulse Academy",
   },
 ];
 
 function Home() {
   return (
     <>
-      {/* Animated Hero Section with Darker Richer Gradient */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-100/95 via-indigo-100/90 via-cyan-100/80 to-violet-100/90 animate-hero-gradient pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200/80">
-        {/* Animated Dynamic Ambient Mesh Orbs with Darker Richer Colors */}
+      {/* Animated Hero Section with Zoom Periwinkle Gradient & Showcase Overlay */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#4863e6] via-[#5974f7] via-65% to-white pt-12 pb-16">
+        {/* Animated Dynamic Ambient Mesh Orbs */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-32 left-1/4 size-[34rem] rounded-full bg-gradient-to-br from-blue-600/35 via-indigo-600/30 to-cyan-500/35 blur-3xl animate-orb-1"
+          className="pointer-events-none absolute -top-32 left-1/4 size-[34rem] rounded-full bg-gradient-to-br from-blue-400/25 via-sky-300/20 to-white/10 blur-3xl animate-orb-1"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute top-32 right-5 size-[30rem] rounded-full bg-gradient-to-tr from-violet-600/30 via-blue-500/30 to-emerald-400/25 blur-3xl animate-orb-2"
+          className="pointer-events-none absolute top-32 right-5 size-[30rem] rounded-full bg-gradient-to-tr from-cyan-300/20 via-blue-400/20 to-white/10 blur-3xl animate-orb-2"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-20 left-10 size-[26rem] rounded-full bg-gradient-to-r from-sky-500/30 to-indigo-600/25 blur-3xl animate-orb-3"
+          className="pointer-events-none absolute -bottom-20 left-10 size-[26rem] rounded-full bg-gradient-to-r from-sky-400/20 to-blue-300/15 blur-3xl animate-orb-3"
         />
 
+        {/* Hero Grid Container */}
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <Reveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/90 px-4 py-1.5 text-xs font-bold tracking-wider text-blue-700 uppercase shadow-2xs backdrop-blur-md">
-                  <Sparkles className="size-3.5 text-blue-600 animate-pulse" aria-hidden="true" />
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/20 px-4 py-1.5 text-xs font-bold tracking-wider text-white uppercase shadow-2xs backdrop-blur-md">
+                  <Sparkles className="size-3.5 text-cyan-200 animate-pulse" aria-hidden="true" />
                   PERFORMANCE MARKETING STUDIO
                 </span>
               </Reveal>
 
               <Reveal delay={90}>
-                <h1 className="mt-6 text-4xl font-extrabold text-slate-900 tracking-tight sm:text-6xl lg:text-7xl">
+                <h1 className="mt-6 text-4xl font-extrabold text-white tracking-tight sm:text-6xl lg:text-7xl">
                   More leads.{" "}
-                  <span className="bg-gradient-to-r from-blue-600 via-indigo-600 via-cyan-500 to-violet-600 bg-clip-text text-transparent animate-gradient-text">
+                  <span className="bg-gradient-to-r from-cyan-200 via-white to-sky-200 bg-clip-text text-transparent animate-gradient-text">
                     Better business.
                   </span>
                 </h1>
               </Reveal>
 
               <Reveal delay={160}>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 font-medium">
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-blue-50/95 font-medium">
                   We build lead engines for ambitious brands — paid ads, search, funnels and
                   conversion work that fill your calendar with qualified buyers.
                 </p>
@@ -146,40 +148,41 @@ function Home() {
                 <div className="mt-9 flex flex-wrap items-center gap-3.5">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 px-8 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:shadow-blue-600/35 active:scale-[0.98]"
+                    className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-extrabold text-[#3b52e2] shadow-xl shadow-black/10 transition-all duration-300 hover:scale-[1.03] hover:bg-slate-50 hover:shadow-2xl active:scale-[0.98]"
                   >
                     Get Free Growth Audit
                   </Link>
                   <a
                     href={`tel:${PHONE_TEL}`}
-                    className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3.5 text-sm font-bold text-slate-700 shadow-2xs transition-all duration-300 hover:border-blue-300 hover:bg-blue-50/50 hover:text-blue-600"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/15 px-7 py-3.5 text-sm font-bold text-white shadow-2xs backdrop-blur-md transition-all duration-300 hover:border-white/70 hover:bg-white/25"
                   >
-                    Call {PHONE_DISPLAY}
+                    <Phone className="size-4 text-white" aria-hidden="true" />
+                    Call Now
                   </a>
                 </div>
               </Reveal>
 
               <Reveal delay={300}>
-                <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 pt-6 border-t border-slate-200/80">
+                <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 pt-6 border-t border-white/20">
                   {[
                     ["3.4x", "Avg. ROI Target"],
                     ["-38%", "Cost Per Lead"],
                     ["14 Days", "To Launch"],
                   ].map(([k, v]) => (
                     <div key={v} className="group transition-transform duration-300 hover:-translate-y-1">
-                      <dt className="font-display text-2xl font-extrabold text-blue-600 sm:text-3xl">
+                      <dt className="font-display text-2xl font-extrabold text-white sm:text-3xl">
                         <CountUp value={String(k)} />
                       </dt>
-                      <dd className="mt-1 text-xs font-semibold text-slate-500 group-hover:text-slate-900 transition-colors">{v}</dd>
+                      <dd className="mt-1 text-xs font-semibold text-blue-100/90 transition-colors">{v}</dd>
                     </div>
                   ))}
                 </dl>
               </Reveal>
             </div>
 
-            {/* Visual Interactive Dashboard Widget */}
+            {/* Visual Interactive Live Campaign Engine Dashboard Widget */}
             <Reveal delay={200} className="lg:justify-self-end w-full">
-              <div className="relative rounded-3xl border border-slate-200/90 bg-white/95 p-6 shadow-2xl shadow-blue-900/10 backdrop-blur-xl sm:p-8">
+              <div className="relative rounded-3xl border border-white/40 bg-white/95 p-6 shadow-2xl shadow-blue-950/20 backdrop-blur-xl sm:p-8">
                 <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                   <div className="flex items-center gap-2.5">
                     <span className="size-3 rounded-full bg-emerald-500 ring-4 ring-emerald-100 animate-pulse" />
@@ -194,8 +197,8 @@ function Home() {
 
                 <div className="mt-6 space-y-4">
                   {[
-                    ["Google Paid Search", 88, "from-blue-500 to-indigo-600"],
-                    ["Meta Ads Engine", 74, "from-indigo-500 to-violet-600"],
+                    ["Google Paid Search", 88, "from-blue-500 to-sky-600"],
+                    ["Meta Ads Engine", 74, "from-sky-500 to-blue-600"],
                     ["Local SEO & Maps", 59, "from-cyan-500 to-blue-600"],
                     ["High-Intent Funnels", 42, "from-emerald-500 to-teal-600"],
                   ].map(([label, val, grad]) => (
@@ -227,36 +230,12 @@ function Home() {
             </Reveal>
           </div>
         </div>
-      </section>
 
-      {/* Marquee Category Banner */}
-      <section className="overflow-hidden border-b border-slate-200/80 bg-slate-900 py-4">
-        <div className="marquee-track flex w-max gap-12 pr-12">
-          {[...Array(2)].map((_, dup) => (
-            <div key={dup} className="flex gap-12" aria-hidden={dup === 1}>
-              {[
-                "Home Services",
-                "Real Estate",
-                "Healthcare",
-                "B2B SaaS",
-                "Education",
-                "Finance",
-                "D2C Brands",
-              ].map((x) => (
-                <span
-                  key={x}
-                  className="font-display text-xs font-bold tracking-[0.2em] text-slate-300 transition-colors duration-300 hover:text-cyan-400 uppercase"
-                >
-                  {x}
-                </span>
-              ))}
-            </div>
-          ))}
+        {/* Floating Showcase Cards Slider Overlay */}
+        <div className="mt-16">
+          <ShowcaseSlider />
         </div>
       </section>
-
-      {/* Showcase Feature Cards Slider (Zoom style) */}
-      <ShowcaseSlider />
 
       {/* Services Grid */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">

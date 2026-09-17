@@ -1,5 +1,5 @@
-import { MessageCircle } from "lucide-react";
 import { PHONE_DISPLAY, WHATSAPP_URL } from "./contact-info";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function FloatingWhatsApp() {
   return (
@@ -14,7 +14,7 @@ export function FloatingWhatsApp() {
         aria-hidden="true"
         className="ping-ring absolute inset-0 rounded-full border border-emerald-400/60"
       />
-      <MessageCircle className="relative size-6 shrink-0 fill-current" aria-hidden="true" />
+      <WhatsAppIcon colored className="relative size-6 shrink-0" />
       <span className="hidden font-semibold text-xs tracking-wide sm:inline-block">
         WhatsApp ({PHONE_DISPLAY})
       </span>
